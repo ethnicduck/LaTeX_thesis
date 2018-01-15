@@ -136,24 +136,25 @@
   \clearpage
   %\vspace*{0.25in}
   \centerheading{TABLE OF CONTENTS}
-  \@starttoc{toc}
+  \addtocontents{toc}{CHAPTER}  			%chapters should have capital Roman numerals and be all caps
+\@starttoc{toc}
   \clearpage
 }
 \renewcommand{\listoffigures}{
   \clearpage
   %\vspace*{0.25in}
-  \part[Figures]{FIGURES}
-  \addtocontents{lof}{Figure}
+  \part[Figures]{LIST OF FIGURES}
+  \addtocontents{lof}{FIGURE}
   \@starttoc{lof}
   \clearpage
 }
 \renewcommand{\listoftables}{
   \clearpage
   %\vspace*{0.25in}
-  \part[Tables]{TABLES}
-  \addtocontents{lot}{Table}
+  \part[Tables]{LIST OF TABLES}
+  \addtocontents{lot}{TABLE}
   \@starttoc{lot}
-  \addtocontents{toc}{\underline{Chapter}}
+
   \clearpage
 }
 \newcommand{\centerheading}[1]{\begin{center}{\textbf{#1}}\end{center}}
