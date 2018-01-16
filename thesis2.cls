@@ -28,6 +28,7 @@
 \usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage[nodayofweek]{datetime}
+\usepackage{graphicx}%		added here so not in thesis.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special commands for
@@ -568,6 +569,26 @@
 \renewcommand{\figure}{\let\@makecaption\@makefigcaption\@float{figure}}
 \renewcommand{\table}{\let\@makecaption\@maketblcaption\@float{table}}
 
+%% added figuretitle because I couldn't find a better way to include a title and a caption in a figure
+\newcommand*{\figuretitle}[1]{%
+    {\centering%   <--------  will only affect the title because of the grouping (by the
+    \textbf{#1}%              braces before \centering and behind \medskip). If you remove
+    \par\medskip}%            these braces the whole body of a {figure} env will be centered.
+}
+
+%inserts new figure with title and caption
+% syntax is \insertfigure{File}{label}{Title}{Caption}
+\newcommand{\insertfigure}[4]{
+	\begin{figure}[p!] %consider other placement options. see: https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+	%	ht! seemed to interleave it with the text pretty well
+	\centering
+	\figuretitle{#3}
+	\includegraphics[width=\linewidth]{#1}
+	\caption[Enrichment of SSRs by repeat number]{
+		#4 \label{#2}}
+	\end{figure}
+	\clearpage
+}
 
 % Places Reference page in table of contents
 \renewcommand{\thebibliography}[1]{%
