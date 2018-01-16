@@ -29,6 +29,7 @@
 \usepackage{geometry}
 \usepackage[nodayofweek]{datetime}
 \usepackage{graphicx}%		added here so not in thesis.tex
+\usepackage{afterpage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special commands for
@@ -579,15 +580,16 @@
 %inserts new figure with title and caption
 % syntax is \insertfigure{File}{label}{Title}{Caption}
 \newcommand{\insertfigure}[4]{
-	\begin{figure}[p!] %consider other placement options. see: https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+	\afterpage{
+		\begin{figure}[p!] %consider other placement options. see: https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
 	%	ht! seemed to interleave it with the text pretty well
-	\centering
-	\figuretitle{#3}
-	\includegraphics[width=\linewidth]{#1}
-	\caption[Enrichment of SSRs by repeat number]{
-		#4 \label{#2}}
-	\end{figure}
-	\clearpage
+		\centering
+		\figuretitle{#3}
+		\includegraphics[width=\linewidth]{#1}
+		\caption[]{#4 \label{#2}}
+		\end{figure}
+		\clearpage
+	}
 }
 
 % Places Reference page in table of contents
