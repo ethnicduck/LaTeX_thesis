@@ -30,6 +30,7 @@
 \usepackage[nodayofweek]{datetime}
 \usepackage{graphicx}%		added here so not in thesis.tex
 \usepackage{afterpage}
+\usepackage{rotating}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special commands for
@@ -586,8 +587,20 @@
 		\centering
 		\figuretitle{#3}
 		\includegraphics[width=\linewidth]{#1}
-		\caption[]{#4 \label{#2}}
+		\caption[#3]{#4 \label{#2}}
 		\end{figure}
+		\clearpage
+	}
+}
+
+\newcommand{\inserthfigure}[4]{
+	\afterpage {
+		\begin{sidewaysfigure}
+		\centering
+		\figuretitle{#3}
+    		 \includegraphics[width=\linewidth]{#1}
+		\caption[#3]{#4 \label{#2}}
+		\end{sidewaysfigure}
 		\clearpage
 	}
 }
