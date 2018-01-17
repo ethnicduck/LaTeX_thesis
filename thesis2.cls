@@ -31,6 +31,7 @@
 \usepackage{graphicx}%		added here so not in thesis.tex
 \usepackage{afterpage}
 \usepackage{rotating}
+\usepackage{caption}%		used in insertable
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special commands for
@@ -601,6 +602,33 @@
     		 \includegraphics[width=\linewidth]{#1}
 		\caption[#3]{#4 \label{#2}}
 		\end{sidewaysfigure}
+		\clearpage
+	}
+}
+
+\newcommand{\inserttable}[5]{
+	\afterpage {
+		\begin{table}
+		\centering
+		\caption[#3]{\textbf{#3} \\#4 \label{#2}}
+		{\small\renewcommand{\arraystretch}{#5}
+			\resizebox*{\textwidth}{!}{\input{#1}}
+		}
+		\end{table}
+		\clearpage
+	}
+}
+
+%insert a sideways table- still needs de-bugging
+\newcommand{\inserthtable}[5]{
+	\afterpage {
+		\begin{sidewaystable}
+		\centering
+		\caption[#3]{\textbf{#3} \\#4 \label{#2}}
+		{\small\renewcommand{\arraystretch}{#5}
+			\resizebox*{\textwidth}{!}{\input{#1}} 
+		}
+		\end{sidewaystable}
 		\clearpage
 	}
 }
