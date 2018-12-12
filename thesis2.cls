@@ -7,6 +7,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Declaration of options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\widowpenalty=10000 
+\clubpenalty=10000
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Execution of options
@@ -32,6 +34,7 @@
 \usepackage{afterpage}
 \usepackage{rotating}
 \usepackage{caption}%		used in insertable
+\usepackage{lscape}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special commands for
@@ -49,8 +52,8 @@
 % Special class file commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{ % 1.5in On Left, 1.0in On top/bottom/Right, gives 6x9 For text
-  body={6in, 9in},
-  left=1.5in,
+  body={6.5in, 9in},		%this was body={6in,9in},
+  left=1in,				%this was left=1.5in,
   top=1in,
   footskip=.25in % puts .3in between text/footer, so footer Is .75in from bottom of page.
 }
@@ -102,7 +105,7 @@
 \@addtoreset{subsubsection}{subsection}
 \setcounter{secnumdepth}{4}
 \renewcommand{\thepart}{}
-\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thechapter}{\Roman{chapter}}						%changed from \arabic to \Roman
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
@@ -328,8 +331,8 @@
  The form and content of this abstract are approved. I 			%this is supposed to be right justified
   recommend its publication.
 \end{flushright}
-  \null\par
-  \null\par
+ % \null\par
+  %\null\par
   \begin{flushright}
     \renewcommand{\baselinestretch}{\singlespace}
     \normalsize
@@ -372,8 +375,8 @@
   \centerline{ {\bf ABSTRACT} }
   #1
 
-  \@linespace
-  \@linespace
+  %\@linespace
+  %\@linespace
   \@linespace
   \@linespace
 
@@ -394,7 +397,7 @@
 \renewcommand{\part}{\secdef\@part\@spart}
 \renewcommand{\@part}[2][]{%
   \centerheading{#2}
-  \addcontentsline{toc}{part}{#1}
+%  \addcontentsline{toc}{part}{#1}
 }
 \renewcommand{\@spart}[1]{%
   \centerheading{#1}
@@ -405,11 +408,13 @@
   \@afterindenttrue
   \secdef\@chapter\@schapter
 }
+
 \renewcommand{\@chapter}[2][]{%
   \refstepcounter{chapter}
-  \begin{flushleft}
-  {\bf\thechapter.~~#2}
-  \end{flushleft}
+  \begin{center}
+ %{\textbf{CHAPTER \thechapter~~#2}}
+{\textbf{CHAPTER \thechapter\\#2}}
+  \end{center}
   \vspace{-1em}
   \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter.}#1}
   \@afterheading
@@ -526,7 +531,8 @@
     \@afterheading
   }
 
-  \renewcommand{\thechapter}{\Alph{chapter}}
+  %\renewcommand{\thechapter}{\Alph{chapter}}			% I think this is where I can change format of title chapters in table of contents
+%\renewcommand\thechapter{\Roman{chapter}}
 
   \setcounter{chapter}{0}}
 
@@ -588,6 +594,23 @@
 		\centering
 		\figuretitle{#3}
 		\includegraphics[width=\linewidth]{#1}
+		\renewcommand{\baselinestretch}{0.5}
+		\caption[#3]{#4 \label{#2}}
+		\end{figure}
+		\clearpage
+	}
+}
+
+%inserts new figure with title and caption
+% syntax is \insertfigure{File}{label}{Title}{Caption}
+\newcommand{\insertscalefigure}[5]{
+	\afterpage{
+		\begin{figure}[p!] %consider other placement options. see: https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+	%	ht! seemed to interleave it with the text pretty well
+		\centering
+		\figuretitle{#3}
+		\includegraphics[totalheight=#5]{#1}
+		\renewcommand{\baselinestretch}{1}
 		\caption[#3]{#4 \label{#2}}
 		\end{figure}
 		\clearpage
@@ -600,6 +623,20 @@
 		\centering
 		\figuretitle{#3}
     		 \includegraphics[width=\linewidth]{#1}
+		\renewcommand{\baselinestretch}{1}
+		\caption[#3]{#4 \label{#2}}
+		\end{sidewaysfigure}
+		 \clearpage
+	}
+}
+
+\newcommand{\insertscalehfigure}[5]{
+	\afterpage {
+		\begin{sidewaysfigure}
+		\centering
+		\figuretitle{#3}
+    		 \includegraphics[width=#5]{#1}
+		\renewcommand{\baselinestretch}{1}
 		\caption[#3]{#4 \label{#2}}
 		\end{sidewaysfigure}
 		\clearpage
@@ -610,6 +647,7 @@
 	\afterpage {
 		\begin{table}
 		\centering
+		\renewcommand{\baselinestretch}{1}
 		\caption[#3]{\textbf{#3} \\#4 \label{#2}}
 		{\small\renewcommand{\arraystretch}{#5}
 			\resizebox*{\textwidth}{!}{\input{#1}}
@@ -624,6 +662,7 @@
 	\afterpage {
 		\begin{sidewaystable}
 		\centering
+		\renewcommand{\baselinestretch}{1}
 		\caption[#3]{\textbf{#3} \\#4 \label{#2}}
 		{\small\renewcommand{\arraystretch}{#5}
 			\resizebox*{\textwidth}{!}{\input{#1}} 
@@ -638,9 +677,10 @@
   \renewcommand{\baselinestretch}{1}
   \normalsize
 
-  \section*{\vspace*{.25in}~\centerheading{REFERENCES}
+  \section*{\centerheading{REFERENCES}
             \markboth{REFERENCES}{REFERENCES}}
-  \addcontentsline{toc}{part}{\underline{References}}
+  \addcontentsline{toc}{chapter}{REFERENCES}
+  \vspace*{0.5cm}
   \list
   {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
   \advance\leftmargin\labelsep

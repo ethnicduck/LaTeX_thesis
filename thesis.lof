@@ -1,3 +1,49 @@
-Figure
-\contentsline {figure}{\numberline {1.1}{\ignorespaces {\em Two successive dominoes in the chain are separated by a distance $d$. The critical angle at which the first domino strikes its neighbor is given by $\theta ^\ast = \qopname \relax o{sin}^{-1} (\frac {d}{h})$.}}}{1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces {\em The oscillatory modes in two dimensions correspond to the wave numbers $\pi /2 \le |\theta _i| < \pi $ for either $i=1$ or $i=2$; this is the region outside of the dashed box. }}}{3}
+FIGURE
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Enrichment of SSRs in the human genome}}{21}
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Separation distance between perfect SSRs in the human genome}}{23}
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Clustering of SSR loci depending on motif similarity }}{25}
+\contentsline {figure}{\numberline {II.4}{\ignorespaces Enrichment of similar SSR loci near (ATGC)$_n$ repeat loci}}{26}
+\contentsline {figure}{\numberline {II.5}{\ignorespaces Decay of sequence similarity with distance from perfect SSR repeats}}{27}
+\contentsline {figure}{\numberline {II.6}{\ignorespaces Asymmetric similarity to poly-A}}{28}
+\contentsline {figure}{\numberline {II.7}{\ignorespaces Visual of numbers of poly-A cloud oligos with different similarities to poly-A}}{29}
+\contentsline {figure}{\numberline {II.8}{\ignorespaces Length distribution of perfect SSR loci annotations expanded using SSR-derived oligos}}{31}
+\contentsline {figure}{\numberline {II.9}{\ignorespaces Cloud extension length distributions of training and test loci}}{32}
+\contentsline {figure}{\numberline {II.10}{\ignorespaces SSR-cloud annotation of poly-A regions adjacent to annotated \textit {Alus}}}{36}
+\contentsline {figure}{\numberline {II.11}{\ignorespaces Anatomy of a complex SSR locus and its annotation by SSR-clouds }}{38}
+\contentsline {figure}{\numberline {II.12}{\ignorespaces Genomic SSR content annotated with different merge distances and false discovery thresholds}}{41}
+\contentsline {figure}{\numberline {III.1}{\ignorespaces Sequence networks of 25,361 H3N2 sequences using different flucheck parameters}}{48}
+\contentsline {figure}{\numberline {III.2}{\ignorespaces Kmer variability in H1N1 sequences}}{50}
+\contentsline {figure}{\numberline {III.3}{\ignorespaces Kmer variability in H3N2 sequences}}{51}
+\contentsline {figure}{\numberline {III.4}{\ignorespaces Kmer variability in H5N1 sequences}}{52}
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces Predicted fragment size from double restriction enzyme digestion}}{66}
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces Origin of schistosome samples}}{67}
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces Distribution of genome library sizes}}{69}
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Recovery of loci in DNA sequences}}{70}
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Recovery of loci in adult worm DNA sequences}}{71}
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Recovery of loci in miracidia DNA sequences from eight samples}}{72}
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Number of loci recovered among miracidia samples}}{73}
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Number of loci recovered among eight miracidia samples}}{74}
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Principal components analysis of Schistosoma sample}}{81}
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Origin of schistosome samples}}{91}
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Length and depth of recovered ddRADseq fragments}}{94}
+\contentsline {figure}{\numberline {V.3}{\ignorespaces Principal components analysis of variants}}{104}
+\contentsline {figure}{\numberline {V.4}{\ignorespaces STRUCTURE analysis of miracidia}}{105}
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Inter-village $F_{ST}$ values}}{106}
+\contentsline {figure}{\numberline {V.6}{\ignorespaces Distribution of heterozygosity scores from all miracidia}}{108}
+\contentsline {figure}{\numberline {V.7}{\ignorespaces Neighbor joining tree based on pairwise allele sharing distances}}{109}
+\contentsline {figure}{\numberline {V.8}{\ignorespaces Proportion of pairwise shared rare alleles by village distance }}{111}
+\contentsline {figure}{\numberline {V.9}{\ignorespaces Proportion of pairwise shared rare alleles by comparison category}}{112}
+\contentsline {figure}{\numberline {V.10}{\ignorespaces Cross-season and cross-host family communities within a village}}{114}
+\contentsline {figure}{\numberline {V.11}{\ignorespaces Genotype pattern frequencies under four different hypothesized relationships}}{120}
+\contentsline {figure}{\numberline {V.12}{\ignorespaces Example pedigrees and identity by descent patterns between different 2$^{nd}$-degree relatives}}{123}
+\contentsline {figure}{\numberline {VI.1}{\ignorespaces ddRADseq generated fragment size distribution in the human genome}}{137}
+\contentsline {figure}{\numberline {VI.2}{\ignorespaces Distribution of the number of variants per ddRADseq fragment in the human genome}}{142}
+\contentsline {figure}{\numberline {VI.3}{\ignorespaces Counts of population-informative microhaplotypes found in the medium-resolution set}}{145}
+\contentsline {figure}{\numberline {VI.4}{\ignorespaces Counts of population informative microhaplotypes found in the high-resolution set}}{146}
+\contentsline {figure}{\numberline {VI.5}{\ignorespaces Counts of single population-informative microhaplotypes found in the high-resolution set}}{148}
+\contentsline {figure}{\numberline {VI.6}{\ignorespaces Rare shared population-informative microhaplotypes are geographically constrained}}{149}
+\contentsline {figure}{\numberline {VI.7}{\ignorespaces Distribution of pairwise IBD tract lengths}}{158}
+\contentsline {figure}{\numberline {VI.8}{\ignorespaces Distribution of lengths of runs of homozygosity in cases and controls}}{159}
+\newpage 
+\contentsline {figure}{\numberline {VI.9}{\ignorespaces Observed and expected counts of haplotypes on chromosome 22 }}{161}
+\contentsline {figure}{\numberline {VI.10}{\ignorespaces Manhattan plot of 37,714 haplotypes }}{163}

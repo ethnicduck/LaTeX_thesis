@@ -1,0 +1,47 @@
+%
+% File - ch2.tex
+%
+%
+% Description:
+% This file should contain the second real chapter or section of your
+% thesis.
+%
+%
+\section{Introduction} {
+I'm leaving some text in here to show how sections are set up.
+\section{Methods and Materials}{
+\subsection{Subsection level}{
+Blah Blah Blah
+}
+\subsection{Another subsection}{
+This is all just nonsense 
+}
+\subsection{This is a redundant example of a subsection header}{
+More garbage text
+\\ %Infrequently, I had to insert these slashes to avoid widowed or orphaned text. I'm just leaving them here for you to see
+\\
+}
+}
+\section{Results}{
+\subsection{Making Good progress now...} {
+
+What is the meaning of life?
+
+\insertfigure{Figures/Hello.jpg}{fig_name}{title}{This figure is an example of how to insert a figure. It should be on its own page because I find it easier to automatically put it by itself. } 
+
+Here, I am giving an example of a citation\cite{ref1, ref2 }.
+And here I am giving an example of a reference to a figure  (see Figure \ref{fig_name}). 
+
+\inserthfigure{Figures/Hello.jpg}{horizontal_figure}{Title of Figure }{This is just to show how to put in a figure on a landscape page. }
+\insertscalefigure{Figures/Hello.jpg}{fig_name1}{Figure title}{Caption on a scaled figure} {16cm}
+\inserttable{Tables/Example_table.tex}{table}{Title}{Caption}{1} %this last bracket can scale the table. Ex: 0.75 will make it three-quarters size
+
+} 
+}
+\section{Discussion}{
+}
+
+\section{Acknowledgements}{
+If you have folks to acknowledge...
+}
+
