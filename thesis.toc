@@ -1,9 +1,0 @@
-\contentsline {part}{Tables}{vii}
-\relax $\@@underline {\hbox {Chapter}}\mathsurround \z@ $\relax 
-\contentsline {part}{Figures}{viii}
-\contentsline {chapter}{\numberline {1.}Introduction}{1}
-\contentsline {chapter}{\numberline {2.}Main Results}{5}
-\noindent \relax $\@@underline {\hbox {Appendix}}\mathsurround \z@ $\relax 
-\contentsline {chapter}{\numberline {A.}Theorems}{7}
-\contentsline {chapter}{\numberline {B.}Contradictions}{8}
-\contentsline {part}{\relax $\@@underline {\hbox {References}}\mathsurround \z@ $\relax }{9}
